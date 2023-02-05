@@ -1,58 +1,39 @@
 import React, { useState } from 'react'
-import logo from '../../assets/Logo.svg'
-import { BiHomeAlt, BiInfoCircle, BiUserVoice, BiPhone, BiCart } from "react-icons/bi";
-import { BsCartFill } from "react-icons/bs";
 import { Container } from './styles';
+import { HiOutlineBars3 } from "react-icons/hi2";
+import { BsCartFill } from "react-icons/bs";
+import Sidebar from './components/Sidebar';
+import logo from '../../assets/Logo.svg'
 
-const NavBar = () => {
+function NavBar() {
+    const [sidebar, setSidebar] = useState(false)
 
     const [openMenu, setOpenMenu] = useState(false)
 
-    const menuOptions = [
-        {
-            text: "Home",
-            icon: <BiHomeAlt />
-        },
-        {
-            text: "About",
-            icon: <BiInfoCircle />
-        },
-        {
-            text: "Testimonials",
-            icon: <BiUserVoice />
-        },
-        {
-            text: "Contact",
-            icon: <BiPhone />
-        },
-        {
-            text: "Cart",
-            icon: <BiCart />
-        },
-    ]
-
+    function handleOpenMenu() {
+        setOpenMenu(!openMenu)
+    }
     return (
         <Container>
             <nav>
                 <div className="nav-logo-container">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="logo" />
                 </div>
                 <div className="navbar-links-container">
                     <a href="">Home</a>
                     <a href="">About</a>
                     <a href="">Testimonials</a>
                     <a href="">Contact</a>
-                    <a href="">
-                        <BsCartFill className="navbar-cart-icon" />
-                    </a>
+                    <BsCartFill className="navbar-cart-icon" />
                     <button className="primary-button">Bookings Now</button>
                 </div>
                 <div className="navbar-menu-container">
-
+                    <HiOutlineBars3 onClick={handleOpenMenu} size={36} />
+                    {openMenu && <Sidebar active={setOpenMenu} />}
                 </div>
             </nav>
         </Container>
-    );
-};
+    )
+}
 
-export default NavBar;
+export default NavBar
