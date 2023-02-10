@@ -15,21 +15,31 @@ export const Container = styled.div`
     justify-content: space-between;
     min-height: 90px;
   }
-
+/* 
   div a:hover{
-    color: #FE9E0D;
-  }
+    color: #FE9E0A;
+  } */
 
   .navbar-menu-container {
     display: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .navbar-links-container a {
-      margin-right: 3rem;
-      text-decoration: none;
-      color: black;
-      font-size: 1.1rem;
-      font-weight: 600;
+  .navbar-links-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .navbar-links-container a, svg {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 
   .primary-button {
@@ -57,7 +67,6 @@ export const Container = styled.div`
       cursor: pointer;
   }
 
-
   @media (max-width: 1000px) {
       .navbar-links-container a {
           margin-right: 1rem;
@@ -70,7 +79,8 @@ export const Container = styled.div`
 
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
+
       .nav-logo-container {
           max-width: 140px;
       }
@@ -81,6 +91,7 @@ export const Container = styled.div`
 
       .navbar-menu-container {
           display: flex;
+
       }
 
     }
@@ -92,6 +103,4 @@ export const Container = styled.div`
           display: none;
       }
   }
-
-
 `;

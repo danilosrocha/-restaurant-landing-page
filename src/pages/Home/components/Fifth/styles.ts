@@ -1,70 +1,66 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0 auto;
-  gap: 1rem;
-  position: relative;
-  max-width: 1200px;
-  /* background-color: red; */
+  margin-top: 100px;
   
   a {
     text-decoration: none;
     color: initial;
   }
-  
-  .banner-background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -2;
-    max-width: 700px;
-  }
 
-  .primeira_imagem{
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    img {
-      display: block;
-      height: auto;
-      max-width: 500px;
-    }
-
-    .primeira_imagem_texto{
+  .quinta-imagem-texto{
       display: flex;
-      flex: 1;
-      flex-direction: column;
       flex-wrap: wrap;
-      gap: 2rem;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4rem;
 
       h1 {
-        font-size: 3.75rem;
+        text-align: center;
         color: #4C4C4C;
       }
-
-      p {
-        font-size: 1.6rem;
-        color: #828282;
-      }
-
-      a {
-        align-self: start;
+      
+      .input {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 30px 55px;
-        gap: 20px;
-        background: #FE9E0D;
+        padding: 10px 40px;
+      
+        background: white;
         border-radius: 100px;
-      }
+        width: 550px;
+
+        input {
+          border: none;
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+          font-size: inherit;
+          font-family: inherit;
+          color: inherit;
+
+        }
+
+        button{
+          padding: 15px 50px;
+          border: none;
+          background: #FE9E0D;
+          border-radius: 100px;
+          color: white;
+          font-weight: bold;
+        }
+    }
+  }
+
+  .footer{
+    h3 {
+      margin-top: 100px;
+      padding: 50px;
+      background: #fff;
+      color: #303030;
+      text-align: center;
     }
   }
 

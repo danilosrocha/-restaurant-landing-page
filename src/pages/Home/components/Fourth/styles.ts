@@ -1,72 +1,71 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0 auto;
-  gap: 1rem;
-  position: relative;
-  max-width: 1200px;
-  /* background-color: red; */
+  margin-top: 100px;
   
   a {
     text-decoration: none;
     color: initial;
   }
-  
-  .banner-background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -2;
-    max-width: 700px;
-  }
 
-  .primeira_imagem{
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
 
-    img {
-      display: block;
-      height: auto;
-      max-width: 500px;
-    }
-
-    .primeira_imagem_texto{
+  .quarta-imagem-texto{
       display: flex;
-      flex: 1;
-      flex-direction: column;
       flex-wrap: wrap;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       gap: 2rem;
 
-      h1 {
-        font-size: 3.75rem;
-        color: #4C4C4C;
+      .work {
+        color: #F4980D;
+        font-weight: 700;
       }
 
       p {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         color: #828282;
-      }
-
-      a {
-        align-self: start;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 55px;
-        gap: 20px;
-        background: #FE9E0D;
-        border-radius: 100px;
+        text-align: center;
       }
     }
-  }
+
+    .quadros {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        padding: 90px;
+        
+
+        .quadro{
+          margin: 0 auto;
+          background: #FFFFFF;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 21px 0px;
+          gap: 40px;
+          max-width: 700px;
+
+          .star{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+          }
+
+          p{
+            text-align: center;
+            padding: 0rem 10rem;
+          }
+          
+          h3{
+            margin-bottom: 20px;
+          }
+        }
+      }
 
   @media (min-width: 1200px){
     .banner-background {

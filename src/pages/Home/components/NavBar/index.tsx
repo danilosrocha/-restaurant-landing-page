@@ -3,11 +3,9 @@ import { Container } from './styles';
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { BsCartFill } from "react-icons/bs";
 import Sidebar from './components/Sidebar';
-import logo from '../../assets/Logo.svg'
+import logo from '../../../../assets/Logo.svg'
 
 function NavBar() {
-    const [sidebar, setSidebar] = useState(false)
-
     const [openMenu, setOpenMenu] = useState(false)
 
     function handleOpenMenu() {
@@ -20,10 +18,10 @@ function NavBar() {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="navbar-links-container">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Testimonials</a>
-                    <a href="">Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#testimonial">Testimonials</a>
+                    <a href="#contato">Contact</a>
                     <BsCartFill className="navbar-cart-icon" />
                     <button className="primary-button">Bookings Now</button>
                 </div>

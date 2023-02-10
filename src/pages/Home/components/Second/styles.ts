@@ -1,35 +1,29 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0 auto;
-  gap: 1rem;
-  position: relative;
-  max-width: 1200px;
-  /* background-color: red; */
+  margin-top: 100px;
   
   a {
     text-decoration: none;
     color: initial;
   }
-  
-  .banner-background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -2;
-    max-width: 700px;
-  }
 
-  .primeira_imagem{
-    padding: 2.5rem;
+
+  .segunda-imagem{
+    padding: 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    position: relative;
+
+    .banner-background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 210px;
+    }
 
     img {
       display: block;
@@ -37,13 +31,15 @@ export const Container = styled.div`
       max-width: 500px;
     }
 
-    .primeira_imagem_texto{
+    .segunda-imagem-texto{
       display: flex;
-      flex: 1;
       flex-direction: column;
-      flex-wrap: wrap;
       gap: 2rem;
 
+      .about {
+        color: #F4980D;
+        font-weight: 700;
+      }
       h1 {
         font-size: 3.75rem;
         color: #4C4C4C;
@@ -65,7 +61,42 @@ export const Container = styled.div`
         background: #FE9E0D;
         border-radius: 100px;
       }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        .text{
+          color: white;
+          font-weight: bold;
+        }
+      }
+
+      .icon{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        justify-content: center;
+        
+        
+        svg {
+          margin-left: 2rem;
+        }
+
+        a{
+          background: transparent;
+          padding: 0;
+          align-self: center;
+          justify-self: start;
+          margin-left: 1rem;
+          
+        }
+      }
     }
+
   }
 
   @media (min-width: 1200px){

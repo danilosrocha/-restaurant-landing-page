@@ -1,47 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0 auto;
-  gap: 1rem;
-  position: relative;
-  max-width: 1200px;
-  /* background-color: red; */
   
   a {
     text-decoration: none;
     color: initial;
   }
-  
-  .banner-background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -2;
-    max-width: 700px;
-  }
+
 
   .primeira_imagem{
-    padding: 2.5rem;
+    padding: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    
 
     img {
       display: block;
       height: auto;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     .primeira_imagem_texto{
       display: flex;
-      flex: 1;
       flex-direction: column;
-      flex-wrap: wrap;
       gap: 2rem;
 
       h1 {
@@ -54,13 +38,25 @@ export const Container = styled.div`
         color: #828282;
       }
 
-      a {
+      .button {
+        a {
+          padding: 0;
+          margin: 0;
+          align-self: center;
+          justify-self: center;
+          color: white;
+          font-weight: bold;
+        }
+
+        svg {
+          align-self: center;
+          justify-self: center;
+        }
+
         align-self: start;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 55px;
+        padding: 25px 55px;
         gap: 20px;
         background: #FE9E0D;
         border-radius: 100px;
